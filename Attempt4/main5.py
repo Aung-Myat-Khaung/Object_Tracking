@@ -10,12 +10,7 @@ from canny_mask import detect_circle
 from hungarian import assign
 from tracker import Kalman_tracker
 
-
-
-
-
 def _check_mask_area(x, y, r, contour):
-    """Return the ratio of a circle that is filled by *contour* (coverage test)."""
     circle_mask = np.zeros((HEIGHT, WIDTH), dtype=np.uint8)
     cv2.circle(circle_mask, (x, y), r, 255, -1)
 
@@ -33,7 +28,7 @@ def canny_hough(frame, circle_queue):
 
 def hsv_mask(frame, hsv_queue):
 
-    hsv_queue.put(find_blob(frame, [(COLORS['green']['lower'], COLORS['green']['higher'])]))
+    hsv_queue.put(find_blob(frame, [(COLORS['yellow']['lower'], COLORS['yellow']['higher'])]))
 
 
 def fuse_detections(hsv_queue, circle_queue):

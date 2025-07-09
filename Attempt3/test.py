@@ -28,7 +28,7 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
-
+    frame = cv2.resize(frame,(640,480))
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
     # Build a mask that combines *all* colour ranges

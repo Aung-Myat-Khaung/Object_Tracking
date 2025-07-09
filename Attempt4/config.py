@@ -1,8 +1,8 @@
 COLORS = {
-    'green': {
-        "lower": (25, 50, 50),
-        "higher": (80, 255, 255)
-    }
+    "yellow": {
+        "lower": (15, 100,100),
+        "higher": (26, 255, 255),
+    },
 }
 
 CANNY_HIGH = 130
@@ -16,4 +16,4 @@ FRAME_SIZE = (640,480)
 HEIGHT = 480
 WIDTH = 640
 
-MAX_TRACKERS = 3
+MAX_TRACKERS = 2
